@@ -58,7 +58,7 @@ class SelectAgeVC: UIViewController {
             return
         }
         age = self.selectedAge!
-        print(age)
+//        print(age)
         if #available(iOS 13.0, *) {
             let obj = self.storyboard?.instantiateViewController(identifier: "StomachVC") as! StomachVC
             self.navigationController?.pushViewController(obj, animated: false)

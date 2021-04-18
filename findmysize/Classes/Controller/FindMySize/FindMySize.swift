@@ -14,7 +14,7 @@ public class FindMySize:UIViewController,FemiTrackingDelegate {
     
     public func hasSizes() -> Bool {
         let json = loadJSON(key: Measurement_key)
-        print(json)
+//        print(json)
         if json.isEmpty {
             return false
         }
@@ -24,7 +24,7 @@ public class FindMySize:UIViewController,FemiTrackingDelegate {
     
     public func getSizeByAttribute(userId:String,attributeName:String) -> String {
         let json = loadJSON(key: Measurement_key)
-        print(json)
+//        print(json)
         if json.isEmpty {
             return  ""
         }
@@ -38,7 +38,7 @@ public class FindMySize:UIViewController,FemiTrackingDelegate {
     
     public func getAllSizes() -> [JSON] {
         let json = loadJSON(key: Measurement_key)
-        print(json)
+//        print(json)
         if json.isEmpty {
             return []
         }
@@ -59,8 +59,8 @@ public class FindMySize:UIViewController,FemiTrackingDelegate {
     }
     
     func FemiTrackingFinish(size: String) {
-        print("delegate called Home")
-        print(size)
+//        print("delegate called Home")
+//        print(size)
         handlerUpdate(size)
     }
     

@@ -109,7 +109,7 @@ class SelectWidthVC: UIViewController {
     
     @IBAction func btnContinueClicked(_ sender: Any) {
         weight = isLBSValue ? self.convertLbsToKg() : (self.selectedIndex + 36)
-        print(weight)
+//        print(weight)
         isLBS = self.isLBSValue
         widthIndex = self.selectedIndex
         if #available(iOS 13.0, *) {

@@ -107,16 +107,16 @@ class HipsVC: UIViewController {
                     "hip": hip,
                     "brand": brand,
                     "brandSize": brandSize] as [String : Any]
-        print(dict)
+//        print(dict)
         self.showProgress()
         
         ApiManager.shared.MakePostAPI(name: "https://sizeitapi.miqyas.net/api/v1/measurements", params: dict, vc: self) { [self] (response, error) in
             self.hideProgress()
             if response != nil {
                 let json = JSON(response!)
-                print(json)
+//                print(json)
                 saveJSON(j: json, key: Measurement_key)
-                print(loadJSON(key: Measurement_key))
+//                print(loadJSON(key: Measurement_key))
                 //                showAlert(message: "Record saved successfully", vc: self)
 //                self.dismiss(animated: true) {
 //                }

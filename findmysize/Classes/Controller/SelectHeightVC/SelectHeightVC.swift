@@ -68,7 +68,7 @@ class SelectHeightVC: UIViewController {
             }
             position += 1
         }
-        print(arrayFT)
+//        print(arrayFT)
     }
     
     @objc func methodOfReceivedNotification(notification: Notification) {
@@ -83,7 +83,7 @@ class SelectHeightVC: UIViewController {
     
     func checkISSelected() -> (Bool, String) {
         let json = loadJSON(key: Measurement_key)
-        print(json)
+//        print(json)
         if json.isEmpty {
             return (false, "")
         }
@@ -137,7 +137,7 @@ class SelectHeightVC: UIViewController {
         isFT = isFTValue
         heightIndex = self.selectedIndex
         
-        print(height)
+//        print(height)
         if #available(iOS 13.0, *) {
             let obj = self.storyboard?.instantiateViewController(identifier: "SelectWidthVC") as! SelectWidthVC
             self.navigationController?.pushViewController(obj, animated: false)
