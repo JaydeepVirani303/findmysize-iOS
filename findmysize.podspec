@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: findmysize is the size getting library.
                        DESC
 
-  s.homepage         = 'https://github.com/ViraniJaydeep303/findmysize'
+  s.homepage         = 'https://github.com/ViraniJaydeep303/findmysize-iOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Jaydeep' => 'viranijaydeep303@gmail.com' }
-  s.source           = { :git => 'https://github.com/ViraniJaydeep303/findmysize.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/JaydeepVirani303/findmysize-iOS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
