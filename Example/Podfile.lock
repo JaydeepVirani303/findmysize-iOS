@@ -1,15 +1,40 @@
 PODS:
-  - findmysize (0.1.0)
+  - Alamofire (4.9.1)
+  - AlamofireSwiftyJSON (1.0.2):
+    - Alamofire (~> 4.0)
+    - SwiftyJSON (~> 4.0)
+  - findmysize (0.1.7):
+    - Alamofire (~> 4.9.1)
+    - AlamofireSwiftyJSON (~> 1.0.2)
+    - ObjectMapper (~> 4.2.0)
+    - ReachabilitySwift (~> 5.0.0)
+    - SwiftyJSON (~> 4.3.0)
+  - ObjectMapper (4.2.0)
+  - ReachabilitySwift (5.0.0)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - findmysize (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireSwiftyJSON
+    - ObjectMapper
+    - ReachabilitySwift
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   findmysize:
     :path: "../"
 
 SPEC CHECKSUMS:
-  findmysize: 68a751cbdf893e82265a4463778476b5420342c1
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireSwiftyJSON: 74ee3804bed06d07857daf1eeb1615c85dba3997
+  findmysize: 11239797673a82c6e8bb77670c687aff85f2590d
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
 PODFILE CHECKSUM: 7cae4ebdb0f55a2ddac38c3d6f1f0df33bd26985
 
