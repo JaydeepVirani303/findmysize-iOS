@@ -69,17 +69,17 @@ class HipsVC: UIViewController {
         self.btnCurvier.removeUnderline()
         
         if index == 0 {
-            self.imgUser.image = UIImage(named: "hips_narrower")
+            self.imgUser.image = UIImage(named: "hips_narrower", in: Bundle(identifier: "org.cocoapods.findmysize"), compatibleWith: nil)
             self.btnNarrower.underline()
             self.btnNarrower.setTitleColor(.black, for: .normal)
         }
         else if index == 1 {
             self.btnAverage.underline()
-            self.imgUser.image = UIImage(named: "hips_average")
+            self.imgUser.image = UIImage(named: "hips_average", in: Bundle(identifier: "org.cocoapods.findmysize"), compatibleWith: nil)
             self.btnAverage.setTitleColor(.black, for: .normal)
         }
         else {
-            self.imgUser.image = UIImage(named: "hips_curvier")
+            self.imgUser.image = UIImage(named: "hips_curvier", in: Bundle(identifier: "org.cocoapods.findmysize"), compatibleWith: nil)
             self.btnCurvier.underline()
             self.btnCurvier.setTitleColor(.black, for: .normal)
         }
