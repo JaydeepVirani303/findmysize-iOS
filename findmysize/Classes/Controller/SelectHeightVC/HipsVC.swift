@@ -99,7 +99,7 @@ class HipsVC: UIViewController {
     
     func getSize() {
         let dict = ["apiKey": apiKey,
-                    "userId": userId,
+                    "userId": kUserId,
                     "height": height,
                     "weight": weight,
                     "age": age,

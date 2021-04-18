@@ -38,16 +38,22 @@ TODO: findmysize is the size getting library.
   s.dependency 'AlamofireSwiftyJSON', '~> 1.0.2'
   s.dependency 'ObjectMapper', '~> 4.2.0'
 
-  s.source_files = 'findmysize/**/*'
-  s.resource_bundles = {
-       'findmysize' => ['findmysize/**']
-     }
   
-  s.resources = [
-  'findmysize/*.storyboard',
-  'findmysize/**/*.xcassets',
-  'findmysize/**/*.xcassets/*.json',
-  'findmysize/Assets']
+  s.source_files = "findmysize/**/*.{swift}"
+  
+  s.resources = "findmysize/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+  
+#  s.resource_bundles = {
+#      'findmysize' => ['findmysize/*/*.{xib,storyboard,xcassets}'] }
+#  s.resource_bundles = {
+#       'findmysize' => ['findmysize/**']
+#     }
+#    s.resources = ['Classes/Resources/Assets.xcassets']
+#  s.resources = [
+#  'findmysize/*.storyboard',
+#  'findmysize/**/*.xcassets',
+#  'findmysize/**/*.xcassets/*.json',
+#  'findmysize/Assets']
   
   
   
