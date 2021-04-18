@@ -12,14 +12,17 @@ import SwiftyJSON
 
 //MARK: - Variables
 let userDefault = UserDefaults.standard
-let mainStoryboard = UIStoryboard(name: "Femi9", bundle: nil)
+//let mainStoryboard = UIStoryboard(name: "Femi9", bundle: bundle)
+let mainStoryboard = UIStoryboard(name: "Femi9",
+    bundle: Bundle(identifier: "org.cocoapods.findmysize"))
 var Measurement_key = "Measurement_key"
 var Size_notification_key = "Size_notification_key"
 let colorGray = UIColor(red: 96/255, green: 106/255, blue: 113/255, alpha: 1)
+
 //let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 var apiKey: String = "8MYHPT4-6364FZJ-Q2SW96P-GEBF9QP"
-var userId: Int = 1234
+var kUserId: String = ""
 var height: Int = 0
 var weight: Int = 0
 var age: Int = 0
@@ -73,3 +76,20 @@ func showAlert(message: String, vc:UIViewController) {
     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
     vc.present(alert, animated: true, completion: nil)
 }
+
+final class FindMySizeSDK {
+    static let resourceBundle: Bundle = {
+        let myBundle = Bundle(for: FindMySizeSDK.self)
+
+        guard let resourceBundleURL = myBundle.url(
+            forResource: "Femi9", withExtension: "storyboard")
+            else { fatalError("MySDK.bundle not found!") }
+
+        guard let resourceBundle = Bundle(url: resourceBundleURL)
+            else { fatalError("Cannot access MySDK.bundle!") }
+
+        return resourceBundle
+    }()
+}
+
+

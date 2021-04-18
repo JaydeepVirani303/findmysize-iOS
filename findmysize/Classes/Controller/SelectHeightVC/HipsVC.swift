@@ -12,8 +12,7 @@ class HipsVC: UIViewController {
     
     @IBOutlet weak var btnNarrower: UIButton!
     @IBOutlet weak var btnAverage: UIButton!
-    @IBOutlet weak var btnCurvier: UIButton!
-    
+    @IBOutlet weak var btnCurvier: UIButton!    
     @IBOutlet weak var imgUser: UIImageView!
     
     let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorView.Style.gray)
@@ -29,7 +28,6 @@ class HipsVC: UIViewController {
         indicator.center = view.center
         view.addSubview(indicator)
         indicator.bringSubview(toFront:view)
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         indicator.isHidden = true
         // Do any additional setup after loading the view.
     }
@@ -131,18 +129,3 @@ class HipsVC: UIViewController {
         }
     }
 }
-
-//{
-//"apiKey": "8MYHPT4-6364FZJ-Q2SW96P-GEBF9QP",
-//"userId": 12345,
-//"height": 160,
-//"weight": 60,
-//"age": 24,
-//"belly": 10,
-//"hip": 10,
-//"brand": "",
-//"brandSize": 10
-//}
-//use this key: 8MYHPT4-6364FZJ-Q2SW96P-GEBF9QP
-//
-//https://sizeitapi.miqyas.net/api/v1/measurements

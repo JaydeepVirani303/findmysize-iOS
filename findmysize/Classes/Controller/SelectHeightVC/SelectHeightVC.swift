@@ -72,10 +72,12 @@ class SelectHeightVC: UIViewController {
     }
     
     @objc func methodOfReceivedNotification(notification: Notification) {
-        let (isSelected, size) =  self.checkISSelected()
-        if isSelected {
+        let (_, size) =  self.checkISSelected()
+        /*if isSelected {
+            print("delegate called")
             self.delegate?.FemiTrackingFinish(size: size)
-        }
+        }*/
+        self.delegate?.FemiTrackingFinish(size: size)
         self.dismiss(animated: false, completion: nil)
     }
     
