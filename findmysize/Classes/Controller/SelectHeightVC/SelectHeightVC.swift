@@ -23,7 +23,7 @@ class SelectHeightVC: UIViewController {
     
     weak var delegate: FemiTrackingDelegate?
 
-    var isFT: Bool = false
+    var isFTValue: Bool = false
     var totalValue: Int = 57
     var selectedIndex: Int = 8
     
@@ -131,11 +131,11 @@ class SelectHeightVC: UIViewController {
     }
     
     @IBAction func btnContinueClicked(_ sender: Any) {
-        appDelegate.height = isFT ? self.convertFtToCm() : (self.selectedIndex + 142)
-        appDelegate.isFT = isFT
-        appDelegate.heightIndex = self.selectedIndex
+        height = isFTValue ? self.convertFtToCm() : (self.selectedIndex + 142)
+        isFT = isFTValue
+        heightIndex = self.selectedIndex
         
-        print(appDelegate.height)
+        print(height)
         if #available(iOS 13.0, *) {
             let obj = self.storyboard?.instantiateViewController(identifier: "SelectWidthVC") as! SelectWidthVC
             self.navigationController?.pushViewController(obj, animated: false)
@@ -156,7 +156,7 @@ class SelectHeightVC: UIViewController {
     }
     
     @IBAction func btnDownClicked(_ sender: Any) {
-        if isFT {
+        if isFTValue {
             if selectedIndex == 0 {
                 return
             }
@@ -174,7 +174,7 @@ class SelectHeightVC: UIViewController {
     }
     
     @IBAction func btnUpClicked(_ sender: Any) {
-        if isFT {
+        if isFTValue {
             if selectedIndex >= 133 {
                 return
             }
@@ -204,19 +204,19 @@ class SelectHeightVC: UIViewController {
     
     @IBAction func btnSegmentClicked(_ sender: UIButton) {
         if sender == self.btnFT {
-            if self.isFT {
+            if self.isFTValue {
                 return
             }
-            self.isFT = true
+            self.isFTValue = true
             self.lblHeightType.text = "5ft"
             self.totalValue = 134
             self.selectedIndex = 8
             self.showSegment(index: 0)
         } else {
-            if !self.isFT {
+            if !self.isFTValue {
                 return
             }
-            self.isFT = false
+            self.isFTValue = false
             self.lblHeightType.text = "152.4cm"
             self.totalValue = 57
             self.selectedIndex = 8
@@ -279,7 +279,7 @@ extension SelectHeightVC:UITableViewDelegate,UITableViewDataSource {
             return
         }
         self.selectedIndex = indexPath?.row ?? 0
-        if isFT {
+        if isFTValue {
             self.lblHeightType.text = self.getFT(index: indexPath?.row ?? 0)
         }
         else {

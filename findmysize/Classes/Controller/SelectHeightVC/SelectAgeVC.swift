@@ -35,9 +35,9 @@ class SelectAgeVC: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.reloadData()
-        if appDelegate.selectedAgeIndex != nil {
-            self.selectedAge = self.ageMiddleArray[appDelegate.selectedAgeIndex!]
-            self.btnAge.setTitle(self.ageArray[appDelegate.selectedAgeIndex!], for: .normal)
+        if selectedAgeIndex != nil {
+            self.selectedAge = self.ageMiddleArray[selectedAgeIndex!]
+            self.btnAge.setTitle(self.ageArray[selectedAgeIndex!], for: .normal)
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.tableViewHeight.constant = self.tableView.contentSize.height
@@ -57,8 +57,8 @@ class SelectAgeVC: UIViewController {
             showAlert(message: "Please select age", vc: self)
             return
         }
-        appDelegate.age = self.selectedAge!
-        print(appDelegate.age)
+        age = self.selectedAge!
+        print(age)
         if #available(iOS 13.0, *) {
             let obj = self.storyboard?.instantiateViewController(identifier: "StomachVC") as! StomachVC
             self.navigationController?.pushViewController(obj, animated: false)
@@ -92,6 +92,6 @@ extension SelectAgeVC:UITableViewDelegate,UITableViewDataSource {
         self.selectedAge = self.ageMiddleArray[indexPath.row]
         self.btnAge.setTitle(self.ageArray[indexPath.row], for: .normal)
         self.viewPopUp.isHidden = true
-        appDelegate.selectedAgeIndex = indexPath.row
+        selectedAgeIndex = indexPath.row
     }
 }

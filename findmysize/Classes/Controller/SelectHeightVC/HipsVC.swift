@@ -16,19 +16,19 @@ class HipsVC: UIViewController {
     
     @IBOutlet weak var imgUser: UIImageView!
     
-    let indicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+    let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorView.Style.gray)
     var selectedIndex:Int = 2
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if appDelegate.selectedHipsIndex != nil {
-            self.selectedIndex = appDelegate.selectedHipsIndex!
+        if selectedHipsIndex != nil {
+            self.selectedIndex = selectedHipsIndex!
         }
         self.changeColor(index: self.selectedIndex)
         indicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         indicator.center = view.center
         view.addSubview(indicator)
-        indicator.bringSubviewToFront(view)
+        indicator.bringSubview(toFront:view)
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         indicator.isHidden = true
         // Do any additional setup after loading the view.
@@ -40,7 +40,7 @@ class HipsVC: UIViewController {
     }
     
     @IBAction func btnContinueClicked(_ sender: Any) {
-        appDelegate.hip = 10
+        hip = 10
         self.getSize()
     }
     
@@ -61,7 +61,7 @@ class HipsVC: UIViewController {
     }
     
     func changeColor(index: Int) {
-        appDelegate.selectedHipsIndex = index
+        selectedHipsIndex = index
         self.btnNarrower.setTitleColor(.lightGray, for: .normal)
         self.btnAverage.setTitleColor(.lightGray, for: .normal)
         self.btnCurvier.setTitleColor(.lightGray, for: .normal)
@@ -100,15 +100,15 @@ class HipsVC: UIViewController {
     }
     
     func getSize() {
-        let dict = ["apiKey": appDelegate.apiKey,
-                    "userId": appDelegate.userId,
-                    "height": appDelegate.height,
-                    "weight": appDelegate.weight,
-                    "age": appDelegate.age,
-                    "belly": appDelegate.belly,
-                    "hip": appDelegate.hip,
-                    "brand": appDelegate.brand,
-                    "brandSize": appDelegate.brandSize] as [String : Any]
+        let dict = ["apiKey": apiKey,
+                    "userId": userId,
+                    "height": height,
+                    "weight": weight,
+                    "age": age,
+                    "belly": belly,
+                    "hip": hip,
+                    "brand": brand,
+                    "brandSize": brandSize] as [String : Any]
         print(dict)
         self.showProgress()
         
@@ -123,7 +123,7 @@ class HipsVC: UIViewController {
 //                self.dismiss(animated: true) {
 //                }
                 NotificationCenter.default.post(name: Notification.Name(Size_notification_key), object: nil)
-                appDelegate.resetData()
+                resetData()
             }
             else {
                 showAlert(message: "Record not found", vc: self)

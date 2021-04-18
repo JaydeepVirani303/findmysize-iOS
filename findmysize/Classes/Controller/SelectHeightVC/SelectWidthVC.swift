@@ -18,7 +18,7 @@ class SelectWidthVC: UIViewController {
     @IBOutlet weak var ViewWidth: UIView!
     @IBOutlet weak var widthCollectionView: UICollectionView!
     
-    var isLBS: Bool = false
+    var isLBSValue: Bool = false
     var totalValue: Int = 115
     var selectedIndex: Int = 14
     
@@ -30,13 +30,13 @@ class SelectWidthVC: UIViewController {
         self.widthCollectionView.dataSource = self
         self.widthCollectionView.reloadData()
         self.lblHeightType.text = "50kg"
-        if appDelegate.widthIndex != nil {
-            self.isLBS = appDelegate.isLBS
-            self.selectedIndex = appDelegate.widthIndex!
-            self.showSegment(index:  self.isLBS ? 0 : 1)
+        if widthIndex != nil {
+            self.isLBSValue = isLBS
+            self.selectedIndex = widthIndex!
+            self.showSegment(index:  self.isLBSValue ? 0 : 1)
         }
         else {
-            self.showSegment(index: self.isLBS ? 0 : 1)
+            self.showSegment(index: self.isLBSValue ? 0 : 1)
         }
         viewSegment.layer.borderColor = colorGray.cgColor
         viewSegment.layer.borderWidth = 2
@@ -68,7 +68,7 @@ class SelectWidthVC: UIViewController {
     }
     
     @IBAction func btnDownClicked(_ sender: Any) {
-        if isLBS {
+        if isLBSValue {
             if selectedIndex == 0 {
                 return
             }
@@ -86,7 +86,7 @@ class SelectWidthVC: UIViewController {
     }
     
     @IBAction func btnUpClicked(_ sender: Any) {
-        if isLBS {
+        if isLBSValue {
             if selectedIndex == 293 {
                 return
             }
@@ -108,10 +108,10 @@ class SelectWidthVC: UIViewController {
     }
     
     @IBAction func btnContinueClicked(_ sender: Any) {
-        appDelegate.weight = isLBS ? self.convertLbsToKg() : (self.selectedIndex + 36)
-        print(appDelegate.weight)
-        appDelegate.isLBS = isLBS
-        appDelegate.widthIndex = self.selectedIndex
+        weight = isLBSValue ? self.convertLbsToKg() : (self.selectedIndex + 36)
+        print(weight)
+        isLBS = self.isLBSValue
+        widthIndex = self.selectedIndex
         if #available(iOS 13.0, *) {
             let obj = self.storyboard?.instantiateViewController(identifier: "SelectAgeVC") as! SelectAgeVC
             self.navigationController?.pushViewController(obj, animated: false)
@@ -133,19 +133,19 @@ class SelectWidthVC: UIViewController {
     
     @IBAction func btnSegmentClicked(_ sender: UIButton) {
         if sender == self.btnLBS {
-            if self.isLBS {
+            if self.isLBSValue {
                 return
             }
-            self.isLBS = true
+            self.isLBSValue = true
             self.lblHeightType.text = "135lbs"
             self.totalValue = 294
             self.selectedIndex = 99
             self.showSegment(index: 0)
         } else {
-            if !self.isLBS {
+            if !self.isLBSValue {
                 return
             }
-            self.isLBS = false
+            self.isLBSValue = false
             self.lblHeightType.text = "50kg"
             self.totalValue = 115
             self.selectedIndex = 14
@@ -203,7 +203,7 @@ extension SelectWidthVC:UICollectionViewDelegate,UICollectionViewDataSource, UIC
             return
         }
         self.selectedIndex = indexPath?.row ?? 0
-        if isLBS {
+        if isLBSValue {
             self.lblHeightType.text = "\((indexPath?.row ?? 0) + 36)lbs"
         }
         else {

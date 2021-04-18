@@ -18,8 +18,8 @@ class StomachVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if appDelegate.selectedStomachIndex != nil {
-            self.selectedIndex = appDelegate.selectedStomachIndex!
+        if selectedStomachIndex != nil {
+            self.selectedIndex = selectedStomachIndex!
         }
         self.changeColor(index: self.selectedIndex)
         // Do any additional setup after loading the view.
@@ -31,7 +31,7 @@ class StomachVC: UIViewController {
     }
     
     @IBAction func btnContinueClicked(_ sender: Any) {
-        appDelegate.belly = 10
+        belly = 10
         if #available(iOS 13.0, *) {
             let obj = self.storyboard?.instantiateViewController(identifier: "HipsVC") as! HipsVC
             self.navigationController?.pushViewController(obj, animated: false)
@@ -58,7 +58,7 @@ class StomachVC: UIViewController {
     }
     
     func changeColor(index: Int) {
-        appDelegate.selectedStomachIndex = index
+        selectedStomachIndex = index
         self.btnFlatter.setTitleColor(.lightGray, for: .normal)
         self.btnAvarage.setTitleColor(.lightGray, for: .normal)
         self.btnRounder.setTitleColor(.lightGray, for: .normal)
@@ -86,7 +86,7 @@ class StomachVC: UIViewController {
 extension UIButton {
     func underline() {
         if let textUnwrapped = self.titleLabel?.text {
-            let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
+            let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.styleSingle.rawValue]
             let underlineAttributedString = NSAttributedString(string: textUnwrapped, attributes: underlineAttribute)
             self.setAttributedTitle(underlineAttributedString, for: .normal)
         }
