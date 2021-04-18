@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'findmysize'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'findmysize is the size getting library'
 
 # This description is used to generate tags and improve search results.
@@ -27,7 +27,7 @@ TODO: findmysize is the size getting library.
   s.author           = { 'Jaydeep' => 'viranijaydeep303@gmail.com' }
   s.source           = { :git => 'https://github.com/JaydeepVirani303/findmysize-iOS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.module_name = "findmysize"
   s.ios.deployment_target = '9.0'
   s.swift_version = '4.0'
     
