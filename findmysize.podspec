@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'findmysize'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'findmysize is the size getting library'
 
 # This description is used to generate tags and improve search results.
@@ -38,7 +38,7 @@ TODO: findmysize is the size getting library.
   s.dependency 'AlamofireSwiftyJSON', '~> 1.0.2'
   s.dependency 'ObjectMapper', '~> 4.2.0'
 
-  s.source_files = 'findmysize/**/*'
+  s.source_files = 'findmysize/Classes/*.swift'
   s.resource_bundles = {
        'findmysize' => ['findmysize/**']
      }
