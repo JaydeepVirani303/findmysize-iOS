@@ -1,0 +1,16 @@
+PODS:
+  - findmysize (0.1.0)
+
+DEPENDENCIES:
+  - findmysize (from `../`)
+
+EXTERNAL SOURCES:
+  findmysize:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  findmysize: 68a751cbdf893e82265a4463778476b5420342c1
+
+PODFILE CHECKSUM: 7cae4ebdb0f55a2ddac38c3d6f1f0df33bd26985
+
+COCOAPODS: 1.10.1

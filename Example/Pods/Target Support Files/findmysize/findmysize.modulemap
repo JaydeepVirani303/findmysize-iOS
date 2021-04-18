@@ -1,0 +1,6 @@
+framework module findmysize {
+  umbrella header "findmysize-umbrella.h"
+
+  export *
+  module * { export * }
+}
