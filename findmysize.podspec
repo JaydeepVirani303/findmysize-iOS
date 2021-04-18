@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'findmysize'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'findmysize is the size getting library'
 
 # This description is used to generate tags and improve search results.
@@ -48,6 +48,8 @@ TODO: findmysize is the size getting library.
   'findmysize/**/*.xcassets',
   'findmysize/**/*.xcassets/*.json',
   'findmysize/Assets']
+  
+  
   
   # s.resource_bundles = {
   #   'findmysize' => ['findmysize/Assets/*.png']
