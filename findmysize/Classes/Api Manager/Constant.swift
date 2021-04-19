@@ -12,24 +12,21 @@ import SwiftyJSON
 
 //MARK: - Variables
 let userDefault = UserDefaults.standard
-//let mainStoryboard = UIStoryboard(name: "Femi9", bundle: bundle)
-let mainStoryboard = UIStoryboard(name: "Femi9",
-    bundle: Bundle(identifier: "org.cocoapods.findmysize"))
+let mainStoryboard = UIStoryboard(name: "Femi9", bundle: Bundle(identifier: "org.cocoapods.findmysize"))
 var Measurement_key = "Measurement_key"
 var Size_notification_key = "Size_notification_key"
 let colorGray = UIColor(red: 96/255, green: 106/255, blue: 113/255, alpha: 1)
 
-//let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 var apiKey: String = "8MYHPT4-6364FZJ-Q2SW96P-GEBF9QP"
 var kUserId: String = ""
-var height: Int = 0
-var weight: Int = 0
-var age: Int = 0
-var belly: Int = 0
-var hip: Int = 0
-var brand: Int = 0
-var brandSize: Int = 0
+var kHeight: Int = 0
+var kWeight: Int = 0
+var kAge: Int = 0
+var kBelly: Int = 0
+var kHip: Int = 0
+var kBrand: Int = 0
+var kBrandSize: Int = 0
 
 var isFT: Bool = false
 var heightIndex: Int?
@@ -77,19 +74,31 @@ func showAlert(message: String, vc:UIViewController) {
     vc.present(alert, animated: true, completion: nil)
 }
 
-final class FindMySizeSDK {
-    static let resourceBundle: Bundle = {
-        let myBundle = Bundle(for: FindMySizeSDK.self)
-
-        guard let resourceBundleURL = myBundle.url(
-            forResource: "Femi9", withExtension: "storyboard")
-            else { fatalError("MySDK.bundle not found!") }
-
-        guard let resourceBundle = Bundle(url: resourceBundleURL)
-            else { fatalError("Cannot access MySDK.bundle!") }
-
-        return resourceBundle
-    }()
+extension UIButton {
+    func underline() {
+        if let textUnwrapped = self.titleLabel?.text {
+            let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.styleSingle.rawValue]
+            let underlineAttributedString = NSAttributedString(string: textUnwrapped, attributes: underlineAttribute)
+            self.setAttributedTitle(underlineAttributedString, for: .normal)
+        }
+    }
+    
+    func removeUnderline() {
+        if let textUnwrapped = self.titleLabel?.text {
+            let underlineAttributedString = NSAttributedString(string: textUnwrapped, attributes: nil)
+            self.setAttributedTitle(underlineAttributedString, for: .normal)
+        }
+    }
 }
 
+extension CGRect {
+    var center: CGPoint {
+        return CGPoint(x: self.midX, y: self.midY)
+    }
+}
 
+extension UIViewController: UIGestureRecognizerDelegate {
+    @objc func dismissVC(){
+        self.dismiss(animated: true, completion: nil)
+    }
+}

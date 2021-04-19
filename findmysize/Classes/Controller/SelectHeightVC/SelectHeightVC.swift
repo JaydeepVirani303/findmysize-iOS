@@ -7,45 +7,49 @@
 
 import UIKit
 
-
-
+//MARK:- Size return delegate
 protocol FemiTrackingDelegate: class  {
     func FemiTrackingFinish(size: String)
 }
+
 class SelectHeightVC: UIViewController {
     
-    //MARK:- Outlet Zone
+    //MARK:- @IBOutlet
     @IBOutlet weak var tblSelectHeight:UITableView!
     @IBOutlet weak var lblHeightType:UILabel!
     @IBOutlet weak var viewSegment: UIView!
     @IBOutlet weak var btnFT: UIButton!
     @IBOutlet weak var btnCM: UIButton!
     
+    //MARK:- Variables
     weak var delegate: FemiTrackingDelegate?
-
     var isFTValue: Bool = false
     var totalValue: Int = 57
     var selectedIndex: Int = 8
-    
     var arrayFT: [String] = []
     var categoryName: String = ""
-
-    //MARK:- View Life Cycle
+    
+    //MARK:- Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Hide navigation bar
         self.navigationController?.navigationBar.isHidden = true
         NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name(Size_notification_key), object: nil)
-
+        
+        //Check size available
         let (isSelected, size) =  self.checkISSelected()
         if isSelected {
             self.delegate?.FemiTrackingFinish(size: size)
             self.dismiss(animated: false, completion: nil)
             return
         }
+        
+        //Set size default
         tblSelectHeight.isHidden = false
         tblSelectHeight.reloadData()
         self.lblHeightType.text = "160cm"
         self.showSegment(index: 1)
+        
         viewSegment.layer.borderColor = colorGray.cgColor
         viewSegment.layer.borderWidth = 2
         viewSegment.layer.cornerRadius = 5
@@ -53,7 +57,11 @@ class SelectHeightVC: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.tblSelectHeight.scrollToRow(at: IndexPath(row: self.selectedIndex, section: 0), at: .none, animated: false)
         }
-        
+        self.addArrayFT()
+    }
+    
+    //Make FT Array
+    func addArrayFT() {
         var ft: Int = 0
         var position: Int = 11
         
@@ -68,22 +76,21 @@ class SelectHeightVC: UIViewController {
             }
             position += 1
         }
-//        print(arrayFT)
     }
     
+    //Finish size selection
     @objc func methodOfReceivedNotification(notification: Notification) {
         let (_, size) =  self.checkISSelected()
         /*if isSelected {
-            print("delegate called")
-            self.delegate?.FemiTrackingFinish(size: size)
-        }*/
+         self.delegate?.FemiTrackingFinish(size: size)
+         }*/
         self.delegate?.FemiTrackingFinish(size: size)
         self.dismiss(animated: false, completion: nil)
     }
     
+    //Check size is available
     func checkISSelected() -> (Bool, String) {
         let json = loadJSON(key: Measurement_key)
-//        print(json)
         if json.isEmpty {
             return (false, "")
         }
@@ -96,6 +103,7 @@ class SelectHeightVC: UIViewController {
         return (isSelected, filter?.first?.size ?? "")
     }
     
+    //Show segments
     func showSegment(index: Int) {
         self.btnFT.backgroundColor = .white
         self.btnCM.backgroundColor = .white
@@ -112,10 +120,7 @@ class SelectHeightVC: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
+    //Convert FT to CM
     func convertFtToCm() -> Int {
         let array = self.arrayFT[self.selectedIndex].components(separatedBy: " ")
         let ft = Int(array[0].replacingOccurrences(of: "ft", with: "")) ?? 0
@@ -126,18 +131,23 @@ class SelectHeightVC: UIViewController {
         let inchVal: Double = 30.48 * Double(ft)
         let feetVal: Double = 2.54 * Double(inch)
         return Int(Double(inchVal + feetVal))
-        
-//        let inchVal: Double = 0.3937 * Double(self.selectedIndex)
-//        let feetVal: Double = 0.0328 * Double(self.selectedIndex)
-//        return Int(Double(inchVal + feetVal) * 30.48)
     }
     
+    //Get FT to index
+    func getFT(index: Int) -> String {
+        if self.arrayFT.count == 0 || self.arrayFT.count <= index {
+            return ""
+        }
+        return self.arrayFT[index]
+    }
+    
+    //MARK:- @IBAction
+    //Move to next screen
     @IBAction func btnContinueClicked(_ sender: Any) {
-        height = isFTValue ? self.convertFtToCm() : (self.selectedIndex + 142)
+        kHeight = isFTValue ? self.convertFtToCm() : (self.selectedIndex + 142)
         isFT = isFTValue
         heightIndex = self.selectedIndex
         
-//        print(height)
         if #available(iOS 13.0, *) {
             let obj = self.storyboard?.instantiateViewController(identifier: "SelectWidthVC") as! SelectWidthVC
             self.navigationController?.pushViewController(obj, animated: false)
@@ -147,6 +157,7 @@ class SelectHeightVC: UIViewController {
         }
     }
     
+    //Move to Privacy screen
     @IBAction func btnPrivacyClicked(_ sender: Any) {
         if #available(iOS 13.0, *) {
             let obj = self.storyboard?.instantiateViewController(identifier: "PrivacyPolicyVC") as! PrivacyPolicyVC
@@ -157,6 +168,7 @@ class SelectHeightVC: UIViewController {
         }
     }
     
+    //Remove index
     @IBAction func btnDownClicked(_ sender: Any) {
         if isFTValue {
             if selectedIndex == 0 {
@@ -175,6 +187,7 @@ class SelectHeightVC: UIViewController {
         self.tblSelectHeight.scrollToRow(at: IndexPath(row: self.selectedIndex, section: 0), at: .none, animated: false)
     }
     
+    //Increase index
     @IBAction func btnUpClicked(_ sender: Any) {
         if isFTValue {
             if selectedIndex >= 133 {
@@ -194,16 +207,7 @@ class SelectHeightVC: UIViewController {
         }
     }
     
-    func getFT(index: Int) -> String {
-//        let inchVal: Double = 0.3937 * Double(index)
-//        let feetVal: Double = 0.0328 * Double(index)
-//        return "\(String(format: "%.0f", inchVal))ft \(String(format: "%.0f", feetVal))in"
-        if self.arrayFT.count == 0 || self.arrayFT.count <= index {
-            return ""
-        }
-        return self.arrayFT[index]
-    }
-    
+    //Change Segment
     @IBAction func btnSegmentClicked(_ sender: UIButton) {
         if sender == self.btnFT {
             if self.isFTValue {
@@ -229,21 +233,15 @@ class SelectHeightVC: UIViewController {
             self.tblSelectHeight.scrollToRow(at: IndexPath(row: self.selectedIndex, section: 0), at: .none, animated: false)
         }
     }
-}
-
-//MARK:- Action Zone
-
-extension SelectHeightVC {
     
+    //Close screen
     @IBAction func btnCloseAction(_ sender:UIButton) {
         self.dismissVC()
     }
 }
 
-//MARK:- Tablview Delegate
-
 extension SelectHeightVC:UITableViewDelegate,UITableViewDataSource {
-    
+    //MARK:- Tablview Delegate
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return UIView()
     }
@@ -275,6 +273,7 @@ extension SelectHeightVC:UITableViewDelegate,UITableViewDataSource {
         return cell
     }
     
+    //MARK:- ScrollView Delegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let indexPath = tblSelectHeight.indexPathForRow(at: tblSelectHeight.bounds.center)
         if indexPath == nil {
@@ -287,10 +286,5 @@ extension SelectHeightVC:UITableViewDelegate,UITableViewDataSource {
         else {
             self.lblHeightType.text = "\((indexPath?.row ?? 0) + 142)cm"
         }
-    }
-}
-extension CGRect {
-    var center: CGPoint {
-        return CGPoint(x: self.midX, y: self.midY)
     }
 }

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'findmysize'
   s.version          = '0.1.8'
-  s.summary          = 'findmysize is the size getting library'
+  s.summary          = 'This library is helping me to find what is my current size for particular products like, Skirt, T-shirts, Tops, and others.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: findmysize is the size getting library.
+TODO: This library is helping me to find what is my current size for particular products like, Skirt, T-shirts, Tops, and others.
                        DESC
 
   s.homepage         = 'https://github.com/ViraniJaydeep303/findmysize-iOS'

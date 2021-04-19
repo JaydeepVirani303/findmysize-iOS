@@ -9,23 +9,23 @@ import UIKit
 
 class SelectWidthVC: UIViewController {
     
-    //MARK:- Outlet Zone
+    //MARK:- @IBOutlet
     @IBOutlet weak var lblHeightType:UILabel!
     @IBOutlet weak var viewSegment: UIView!
     @IBOutlet weak var btnLBS: UIButton!
     @IBOutlet weak var btnKG: UIButton!
-    
     @IBOutlet weak var ViewWidth: UIView!
     @IBOutlet weak var widthCollectionView: UICollectionView!
     
+    //MARK:- Variables
     var isLBSValue: Bool = false
     var totalValue: Int = 115
     var selectedIndex: Int = 14
     
-    //MARK:- View Life Cycle
-    
+    //MARK:- Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Set size default
         self.widthCollectionView.delegate = self
         self.widthCollectionView.dataSource = self
         self.widthCollectionView.reloadData()
@@ -47,6 +47,7 @@ class SelectWidthVC: UIViewController {
         }
     }
     
+    //Show segments
     func showSegment(index: Int) {
         self.btnLBS.backgroundColor = .white
         self.btnKG.backgroundColor = .white
@@ -63,10 +64,18 @@ class SelectWidthVC: UIViewController {
         }
     }
     
+    //Convert Lbs to kg
+    func convertLbsToKg() -> Int {
+        return Int(Double(self.selectedIndex + 36) * Double(0.453592))
+    }
+    
+    //MARK:- @IBAction
+    //Move to next screen
     @IBAction func btnBackClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: false)
     }
     
+    //Remove index
     @IBAction func btnDownClicked(_ sender: Any) {
         if isLBSValue {
             if selectedIndex == 0 {
@@ -85,6 +94,7 @@ class SelectWidthVC: UIViewController {
         self.widthCollectionView.scrollToItem(at: IndexPath(row: self.selectedIndex, section: 0), at: .centeredHorizontally, animated: false)
     }
     
+    //Increase index
     @IBAction func btnUpClicked(_ sender: Any) {
         if isLBSValue {
             if selectedIndex == 293 {
@@ -103,13 +113,9 @@ class SelectWidthVC: UIViewController {
         self.widthCollectionView.scrollToItem(at: IndexPath(row: self.selectedIndex, section: 0), at: .centeredHorizontally, animated: false)
     }
     
-    func convertLbsToKg() -> Int {
-        return Int(Double(self.selectedIndex + 36) * Double(0.453592))
-    }
-    
+    //Move to next screen
     @IBAction func btnContinueClicked(_ sender: Any) {
-        weight = isLBSValue ? self.convertLbsToKg() : (self.selectedIndex + 36)
-//        print(weight)
+        kWeight = isLBSValue ? self.convertLbsToKg() : (self.selectedIndex + 36)
         isLBS = self.isLBSValue
         widthIndex = self.selectedIndex
         if #available(iOS 13.0, *) {
@@ -121,6 +127,7 @@ class SelectWidthVC: UIViewController {
         }
     }
     
+    //Move to Privacy screen
     @IBAction func btnPrivacyClicked(_ sender: Any) {
         if #available(iOS 13.0, *) {
             let obj = self.storyboard?.instantiateViewController(identifier: "PrivacyPolicyVC") as! PrivacyPolicyVC
@@ -131,6 +138,7 @@ class SelectWidthVC: UIViewController {
         }
     }
     
+    //Change Segment
     @IBAction func btnSegmentClicked(_ sender: UIButton) {
         if sender == self.btnLBS {
             if self.isLBSValue {
@@ -156,19 +164,15 @@ class SelectWidthVC: UIViewController {
             self.widthCollectionView.scrollToItem(at: IndexPath(row: self.selectedIndex, section: 0), at: .centeredHorizontally, animated: false)
         }
     }
-}
-
-//MARK:- Action Zone
-
-extension SelectWidthVC {
     
+    //Close screen
     @IBAction func btnCloseAction(_ sender:UIButton) {
         self.dismissVC()
     }
 }
 
 extension SelectWidthVC:UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+    //MARK:- CollectionView Delegate
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
@@ -197,6 +201,7 @@ extension SelectWidthVC:UICollectionViewDelegate,UICollectionViewDataSource, UIC
         return CGSize(width: 6, height: 115)
     }
     
+    //MARK:- ScrollView Delegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let indexPath = widthCollectionView.indexPathForItem(at: widthCollectionView.bounds.center)
         if indexPath == nil {

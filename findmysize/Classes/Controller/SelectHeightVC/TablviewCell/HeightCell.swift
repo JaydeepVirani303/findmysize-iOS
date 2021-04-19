@@ -9,13 +9,11 @@ import UIKit
 
 class HeightCell: UITableViewCell {
     
-    //MARK:- Outlet Zone
-    
+    //MARK: - @IBOutlet
     @IBOutlet weak var viewBig:UIView!
     @IBOutlet weak var viewSmall:UIView!
     
-    //MARK:- View Life cycle
-
+    //MARK: - Functions
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,5 +24,4 @@ class HeightCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

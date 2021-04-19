@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "hips_narrower.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "hips_narrower.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },

@@ -10,21 +10,23 @@ import SwiftyJSON
 
 public class FindMySize:UIViewController,FemiTrackingDelegate {
     
+    //MARK: - Variables
+    //USE : This function return size when selection is complete
     public var handlerUpdate:(String) -> Void = {_ in}
     
+    //MARK: - Functions
+    //USE : This function return user has selected size erlier or not
     public func hasSizes() -> Bool {
         let json = loadJSON(key: Measurement_key)
-//        print(json)
         if json.isEmpty {
             return false
         }
-        
         return true
     }
     
-    public func getSizeByAttribute(userId:String,attributeName:String) -> String {
+    //USE : This function return size if available in passed attribute
+    public func getSizeByAttribute(attributeName:String) -> String {
         let json = loadJSON(key: Measurement_key)
-//        print(json)
         if json.isEmpty {
             return  ""
         }
@@ -36,17 +38,16 @@ public class FindMySize:UIViewController,FemiTrackingDelegate {
         return (filter?.first?.size ?? "")
     }
     
+    //USE : This function return all size
     public func getAllSizes() -> [JSON] {
         let json = loadJSON(key: Measurement_key)
-//        print(json)
         if json.isEmpty {
             return []
         }
-        
         return json["data"]["size"].arrayValue
-        
     }
     
+    //USE : This function open size picker
     public func openSizePopup(userId:String,attributeName:String,controller:UIViewController) {       
         kUserId = userId
         let obj = mainStoryboard.instantiateViewController(withIdentifier: "SelectHeightVC") as! SelectHeightVC
@@ -58,10 +59,8 @@ public class FindMySize:UIViewController,FemiTrackingDelegate {
         controller.present(nav, animated: true, completion: nil)
     }
     
+    //USE : This function return selected size
     func FemiTrackingFinish(size: String) {
-//        print("delegate called Home")
-//        print(size)
         handlerUpdate(size)
     }
-    
 }

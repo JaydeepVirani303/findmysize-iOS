@@ -9,8 +9,10 @@ import UIKit
 
 class AgeCell: UITableViewCell {
 
+    //MARK: - @IBOutlet
     @IBOutlet weak var lblTitle: UILabel!
     
+    //MARK: - Functions
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

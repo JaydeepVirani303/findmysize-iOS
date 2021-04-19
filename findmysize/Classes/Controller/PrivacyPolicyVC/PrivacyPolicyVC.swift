@@ -9,17 +9,19 @@ import UIKit
 
 class PrivacyPolicyVC: UIViewController {
     
-    //MARK:- View Life Cycle
-    
+    //MARK:- Functions
     override func viewDidLoad() {
         super.viewDidLoad()
       
     }
     
+    //MARK:- @IBAction
+    //Back previous screen
     @IBAction func btnBackClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: false)
     }
   
+    //Close screen
     @IBAction func btnCloseAction(_ sender:UIButton) {
         self.dismissVC()
     }
