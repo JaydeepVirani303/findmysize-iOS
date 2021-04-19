@@ -3,7 +3,7 @@ PODS:
   - AlamofireSwiftyJSON (1.0.2):
     - Alamofire (~> 4.0)
     - SwiftyJSON (~> 4.0)
-  - findmysize (0.1.7):
+  - findmysize (0.1.8):
     - Alamofire (~> 4.9.1)
     - AlamofireSwiftyJSON (~> 1.0.2)
     - ObjectMapper (~> 4.2.0)
@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireSwiftyJSON: 74ee3804bed06d07857daf1eeb1615c85dba3997
-  findmysize: 11239797673a82c6e8bb77670c687aff85f2590d
+  findmysize: c02f1c30447cacad15938076066ee192ab77c70f
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08

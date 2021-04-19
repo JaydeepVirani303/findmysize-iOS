@@ -1,8 +1,8 @@
 {
   "name": "findmysize",
-  "version": "0.1.7",
-  "summary": "findmysize is the size getting library",
-  "description": "TODO: findmysize is the size getting library.",
+  "version": "0.1.8",
+  "summary": "This library is helping me to find what is my current size for particular products like, Skirt, T-shirts, Tops, and others.",
+  "description": "TODO: This library is helping me to find what is my current size for particular products like, Skirt, T-shirts, Tops, and others.",
   "homepage": "https://github.com/ViraniJaydeep303/findmysize-iOS",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/JaydeepVirani303/findmysize-iOS.git",
-    "tag": "0.1.7"
+    "tag": "0.1.8"
   },
   "module_name": "findmysize",
   "platforms": {

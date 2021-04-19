@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dh7-OH-4Pi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dh7-OH-4Pi">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1102,10 +1102,10 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IY5-Sp-qAE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="490"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="549"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Iib-mc-FWG">
-                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="490"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="549"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fR3-Zs-FZq">
                                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
@@ -1222,17 +1222,17 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7T-l7-Mpz">
-                                                                        <rect key="frame" x="0.0" y="210" width="320" height="220"/>
+                                                                        <rect key="frame" x="0.0" y="210" width="320" height="279"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stomach_rounder" translatesAutoresizingMaskIntoConstraints="NO" id="ES7-rE-wMb">
-                                                                                <rect key="frame" x="85" y="10" width="150" height="150"/>
+                                                                                <rect key="frame" x="60" y="10" width="200" height="200"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="height" constant="150" id="2oi-JR-vZf"/>
+                                                                                    <constraint firstAttribute="height" constant="200" id="2oi-JR-vZf"/>
                                                                                     <constraint firstAttribute="width" secondItem="ES7-rE-wMb" secondAttribute="height" multiplier="1:1" id="wKc-IO-MCt"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XTu-Q3-b0u">
-                                                                                <rect key="frame" x="0.0" y="180" width="320" height="29"/>
+                                                                                <rect key="frame" x="0.0" y="230" width="320" height="29"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7n4-tG-IyZ">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="106.5" height="29"/>
@@ -1275,13 +1275,13 @@
                                                                             <constraint firstItem="XTu-Q3-b0u" firstAttribute="leading" secondItem="I7T-l7-Mpz" secondAttribute="leading" id="CtN-HG-ejI"/>
                                                                             <constraint firstItem="ES7-rE-wMb" firstAttribute="centerX" secondItem="I7T-l7-Mpz" secondAttribute="centerX" id="DCG-ER-Mzp"/>
                                                                             <constraint firstAttribute="trailing" secondItem="XTu-Q3-b0u" secondAttribute="trailing" id="In5-2M-Wde"/>
-                                                                            <constraint firstAttribute="height" constant="220" id="J2b-9q-edP"/>
                                                                             <constraint firstItem="ES7-rE-wMb" firstAttribute="top" secondItem="I7T-l7-Mpz" secondAttribute="top" constant="10" id="YDr-XY-3SL"/>
                                                                             <constraint firstItem="XTu-Q3-b0u" firstAttribute="top" secondItem="ES7-rE-wMb" secondAttribute="bottom" constant="20" id="d4w-At-QYc"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="XTu-Q3-b0u" secondAttribute="bottom" constant="20" id="l4N-aN-a6I"/>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHC-JY-cdG">
-                                                                        <rect key="frame" x="0.0" y="440" width="320" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="499" width="320" height="50"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0j6-Q6-6ka" customClass="CustomButton" customModule="findmysize" customModuleProvider="target">
                                                                                 <rect key="frame" x="110" y="0.0" width="100" height="40"/>
@@ -1401,10 +1401,10 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EH9-w1-pwR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="490"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="549"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EVr-l2-1Ih">
-                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="490"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="549"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fK-bl-BnQ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
@@ -1521,17 +1521,17 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fy-g8-6Z0">
-                                                                        <rect key="frame" x="0.0" y="210" width="320" height="220"/>
+                                                                        <rect key="frame" x="0.0" y="210" width="320" height="279"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stomach_rounder" translatesAutoresizingMaskIntoConstraints="NO" id="eau-LU-ouR">
-                                                                                <rect key="frame" x="85" y="10" width="150" height="150"/>
+                                                                                <rect key="frame" x="60" y="10" width="200" height="200"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="eau-LU-ouR" secondAttribute="height" multiplier="1:1" id="3Fu-aW-80G"/>
-                                                                                    <constraint firstAttribute="height" constant="150" id="rKu-w5-7UM"/>
+                                                                                    <constraint firstAttribute="height" constant="200" id="rKu-w5-7UM"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6Zk-UF-1pS">
-                                                                                <rect key="frame" x="0.0" y="180" width="320" height="29"/>
+                                                                                <rect key="frame" x="0.0" y="230" width="320" height="29"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyn-eJ-wOb">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="106.5" height="29"/>
@@ -1571,13 +1571,13 @@
                                                                             <constraint firstItem="eau-LU-ouR" firstAttribute="centerX" secondItem="7Fy-g8-6Z0" secondAttribute="centerX" id="022-Xx-xJu"/>
                                                                             <constraint firstAttribute="trailing" secondItem="6Zk-UF-1pS" secondAttribute="trailing" id="6dj-fQ-vFX"/>
                                                                             <constraint firstItem="6Zk-UF-1pS" firstAttribute="leading" secondItem="7Fy-g8-6Z0" secondAttribute="leading" id="ELp-eT-82Z"/>
-                                                                            <constraint firstAttribute="height" constant="220" id="LEX-LP-fHH"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="6Zk-UF-1pS" secondAttribute="bottom" constant="20" id="S1v-Yx-y4R"/>
                                                                             <constraint firstItem="eau-LU-ouR" firstAttribute="top" secondItem="7Fy-g8-6Z0" secondAttribute="top" constant="10" id="kUN-UR-uXK"/>
                                                                             <constraint firstItem="6Zk-UF-1pS" firstAttribute="top" secondItem="eau-LU-ouR" secondAttribute="bottom" constant="20" id="l54-Hp-YO1"/>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6s-P8-hwL">
-                                                                        <rect key="frame" x="0.0" y="440" width="320" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="499" width="320" height="50"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIX-tS-GBc" customClass="CustomButton" customModule="findmysize" customModuleProvider="target">
                                                                                 <rect key="frame" x="110" y="0.0" width="100" height="40"/>
@@ -2487,10 +2487,10 @@ to begin a size recommendation</string>
     <resources>
         <image name="cancel" width="16" height="16"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <image name="ic_back" width="50" height="50"/>
+        <image name="ic_back" width="25" height="25"/>
         <image name="ic_down" width="15" height="15"/>
         <image name="ic_up" width="15" height="15"/>
-        <image name="stomach_rounder" width="309" height="309"/>
+        <image name="stomach_rounder" width="154.5" height="154.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
